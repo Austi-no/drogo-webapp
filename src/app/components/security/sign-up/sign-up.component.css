@@ -86,3 +86,6 @@ select.form-control { -webkit-appearance: menulist; }
 :-ms-input-placeholder {
   font-style: italic;
 }
+.form-select ,.form-control:hover{
+  border-color: #007bff;
+}

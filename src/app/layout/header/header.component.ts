@@ -14,7 +14,8 @@ export class HeaderComponent implements OnInit {
   toggle() {
     //On Full Screen
     console.log("clicked")
-    var wrapper = document.querySelector(".app");
-    wrapper?.classList.toggle("has-compact-menu");
+    var wrapper = document.querySelector(".menu-toggle-btn");
+    wrapper?.classList.toggle("sidebar-nav-wrapper");
+
   }
 }

@@ -1,1 +1,11 @@
 
+
+.text-default {
+  color: #09afdf;
+}
+.logo-font{
+  font-family: "Pacifico", cursive, sans-serif;
+}
+.nav-item a{
+  cursor: pointer;
+}

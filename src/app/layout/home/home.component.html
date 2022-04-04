@@ -1,7 +1,13 @@
-<div class="container">
+<app-sidebar></app-sidebar>
+<!-- ======== main-wrapper start =========== -->
+<main class="main-wrapper">
+<app-header></app-header>
+  <!-- ========== section start ========== -->
+  <section class="section">
+    <div class="container-fluid">
+<router-outlet></router-outlet>
+    </div>
+  </section>
 
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
 
-</div>
+</main>

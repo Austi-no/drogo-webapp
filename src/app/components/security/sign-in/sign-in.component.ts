@@ -31,6 +31,7 @@ export class SignInComponent implements OnInit {
   }
 
   login(){
+    // this.router.navigate(['home'])
     this.spinner.show()
     // stop here if form is invalids
     if (this.form.invalid) {
