@@ -15,8 +15,7 @@ img {
   height: auto;
 }
 
-/* Lists
----------------------------------- */
+/* Lists---------------------------------- */
 ul {
   list-style: square;
 }
@@ -191,8 +190,7 @@ ul {
   }
 }
 
-/* Boxed Layout
----------------------------------- */
+/* Boxed Layout---------------------------------- */
 .boxed .page-wrapper {
   margin-right: auto;
   margin-left: auto;
@@ -472,8 +470,7 @@ ul {
   width: 100%;
 }
 
-/*Animated Backgrounds
----------------------------------- */
+/*Animated Backgrounds---------------------------------- */
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .animated-text h2 {
@@ -669,16 +666,14 @@ ul {
   }
 }
 
-/* Fullpage navigation
----------------------------------- */
+/* Fullpage navigation---------------------------------- */
 .full-page .header-container {
   position: fixed;
   width: 100%;
   top: 0;
 }
 
-/* Custom Grid
----------------------------------- */
+/* Custom Grid---------------------------------- */
 .grid-space-20 {
   margin-right: -10.5px;
   margin-left: -10.5px;
@@ -752,8 +747,7 @@ ul {
   padding-bottom: 0;
 }
 
-/* Separators
----------------------------------- */
+/* Separators---------------------------------- */
 .separator {
   width: 100%;
   margin: 20px auto 15px;
@@ -1113,8 +1107,7 @@ h5 + .separator {
   }
 }
 
-/* Miscellaneous
----------------------------------- */
+/* Miscellaneous---------------------------------- */
 .absolute-positioned-top {
   position: absolute;
   top: 0;
@@ -1295,8 +1288,7 @@ h5 + .separator {
   }
 }
 
-/* 3 Sections
------------------------------------------------------------------------------ */
+/* 3 Sections----------------------------------------------------------------------------- */
 /*Header Top*/
 .header-top {
   font-size: 12px;
@@ -1352,10 +1344,8 @@ h5 + .separator {
   margin-bottom: 0;
 }
 
-/* 4 Pages
------------------------------------------------------------------------------ */
-/* Blog pages
----------------------------------- */
+/* 4 Pages----------------------------------------------------------------------------- */
+/* Blog pages---------------------------------- */
 .blogpost {
   margin: 0 0 70px;
 }
@@ -1431,8 +1421,7 @@ h5 + .separator {
   }
 }
 
-/* Comments
----------------------------------- */
+/* Comments---------------------------------- */
 #comments {
   margin-top: 60px;
 }
@@ -1506,8 +1495,7 @@ h5 + .separator {
   text-decoration: underline;
 }
 
-/* Blog Masonry Grid
----------------------------------- */
+/* Blog Masonry Grid---------------------------------- */
 .masonry-grid-item .blogpost footer {
   padding-top: 0px;
   border-top: none;
@@ -1517,8 +1505,7 @@ h5 + .separator {
   font-size: 22px;
 }
 
-/* Blog Timeline layout
----------------------------------- */
+/* Blog Timeline layout---------------------------------- */
 .timeline {
   position: relative;
   padding: 40px 0;
@@ -1657,8 +1644,7 @@ h5 + .separator {
   }
 }
 
-/* Shop Pages
----------------------------------- */
+/* Shop Pages---------------------------------- */
 /*Product Page*/
 .product.price {
   font-size: 24px;
@@ -1754,8 +1740,7 @@ h5 + .separator {
   }
 }
 
-/* Cart and Checkout pages
----------------------------------- */
+/* Cart and Checkout pages---------------------------------- */
 .cart.table .price {
   width: 18%;
   font-size: 14px;
@@ -1853,8 +1838,7 @@ h5 + .separator {
   }
 }
 
-/* About Us Pages
----------------------------------- */
+/* About Us Pages--------------------------------- */
 /* Small devices (tablets, phones less than 767px) */
 @media (max-width: 767px) {
   .team-member {
@@ -1863,8 +1847,7 @@ h5 + .separator {
   }
 }
 
-/* Coming Soon Page
----------------------------------- */
+/* Coming Soon Page---------------------------------- */
 .is-countdown {
   border: 1px solid transparent;
   background-color: transparent;
@@ -1925,8 +1908,7 @@ h5 + .separator {
   }
 }
 
-/* Pages Misc
----------------------------------- */
+/* Pages Misc---------------------------------- */
 .icons-page i {
   font-size: 20px;
   width: 35px;
@@ -1943,10 +1925,8 @@ h5 + .separator {
   color: #ffffff;
 }
 
-/* 5 Components
------------------------------------------------------------------------------ */
-/* Buttons
----------------------------------- */
+/* 5 Components----------------------------------------------------------------------------- */
+/* Buttons---------------------------------- */
 /*Buttons Color Variations*/
 .btn:focus {
   color: inherit;
@@ -2503,8 +2483,7 @@ fieldset[disabled] .btn-default {
   background: #0c9ec7;
 }
 
-/* Tabs
----------------------------------- */
+/* Tabs---------------------------------- */
 .nav-tabs.style-1 {
   border-bottom: 1px solid #e1e1e1;
   margin-bottom: 15px;
@@ -2847,8 +2826,7 @@ fieldset[disabled] .btn-default {
   }
 }
 
-/* Pager
----------------------------------- */
+/* Pager---------------------------------- */
 ul.pagination,
 ul.pager {
   margin: 20px 0 40px;
@@ -2899,8 +2877,7 @@ ul.pagination li.active a,
   border-color: #09afdf;
 }
 
-/* Breadcrumb
----------------------------------- */
+/* Breadcrumb---------------------------------- */
 .breadcrumb-container {
   background-color: #f8f8f8;
   border-bottom: 1px solid #f4f4f4;
@@ -2964,8 +2941,7 @@ ul.pagination li.active a,
   color: #0c9ec7;
 }
 
-/* Nav pills
----------------------------------- */
+/* Nav pills---------------------------------- */
 .nav-pills:not(.nav-stacked) {
   margin-bottom: 15px;
 }
@@ -3129,8 +3105,7 @@ ul.pagination li.active a,
   color: #0c9ec7;
 }
 
-/* Collapse
----------------------------------- */
+/* Collapse---------------------------------- */
 .panel-group .panel-default {
   border-color: #eaeaea;
   -webkit-box-shadow: none;
@@ -3304,8 +3279,7 @@ ul.pagination li.active a,
   content: "\f067";
 }
 
-/* Progress bars
----------------------------------- */
+/* Progress bars---------------------------------- */
 .progress.style-1 {
   margin-top: 25px;
   background-color: #fafafa;
@@ -3425,8 +3399,7 @@ ul.pagination li.active a,
   box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Circular Progress Bars
----------------------------------- */
+/* Circular Progress Bars---------------------------------- */
 .knob-container {
   margin: 10px;
   position: relative;
@@ -3455,8 +3428,7 @@ ul.pagination li.active a,
   }
 }
 
-/* Forms
----------------------------------- */
+/* Forms---------------------------------- */
 form {
   margin: 20px 0;
 }
@@ -3827,8 +3799,7 @@ fieldset[disabled] .form-control {
   }
 }
 
-/* Alerts
----------------------------------- */
+/* Alerts---------------------------------- */
 .alert {
   margin: 20px 0;
   -webkit-border-radius: 5px;
@@ -3881,8 +3852,7 @@ fieldset[disabled] .form-control {
   display: none;
 }
 
-/*Announcments
----------------------------------- */
+/*Announcments---------------------------------- */
 .announcement {
   font-size: 13px;
 }
@@ -3923,8 +3893,7 @@ fieldset[disabled] .form-control {
   margin-bottom: 5px;
 }
 
-/*Icons
----------------------------------- */
+/*Icons---------------------------------- */
 .icon {
   display: inline-block;
   text-align: center;
@@ -3990,8 +3959,7 @@ fieldset[disabled] .form-control {
   line-height: 43px;
 }
 
-/*Feature Box
----------------------------------- */
+/*Feature Box---------------------------------- */
 .feature-box,
 .feature-box-2 {
   margin-bottom: 30px;
@@ -4166,8 +4134,7 @@ fieldset[disabled] .form-control {
   bottom: 10px;
 }
 
-/*Image box
----------------------------------- */
+/*Image box---------------------------------- */
 .owl-item .image-box {
   margin-bottom: 20px;
 }
@@ -4211,8 +4178,7 @@ fieldset[disabled] .form-control {
   }
 }
 
-/*Listing Items
----------------------------------- */
+/*Listing Items---------------------------------- */
 .listing-item .overlay-container .badge {
   position: absolute;
   border: 1px solid #09afdf;
@@ -4261,8 +4227,7 @@ fieldset[disabled] .form-control {
   padding: 5px;
 }
 
-/*Modals
----------------------------------- */
+/*Modals---------------------------------- */
 .modal-content .modal-header {
   background-color: #09afdf;
 }
@@ -4290,8 +4255,7 @@ fieldset[disabled] .form-control {
   }
 }
 
-/*Images and Overlays
----------------------------------- */
+/*Images and Overlays---------------------------------- */
 .overlay-container {
   position: relative;
   display: block;
@@ -4501,36 +4465,31 @@ fieldset[disabled] .form-control {
   }
 }
 
-/*Video Backgrounds
----------------------------------- */
+/*Video Backgrounds---------------------------------- */
 .video-background,
 .video-background-banner {
   position: relative;
   overflow: hidden;
 }
 
-/* Responsive iframe
----------------------------------- */
+/* Responsive iframe---------------------------------- */
 .tp-caption .embed-responsive {
   overflow: visible;
 }
 
-/* Audio wrapper
----------------------------------- */
+/* Audio wrapper---------------------------------- */
 .audio-wrapper iframe {
   width: 100%;
   border: none;
   margin-bottom: 20px;
 }
 
-/* Jumbotron
----------------------------------- */
+/* Jumbotron---------------------------------- */
 .jumbotron {
   background-color: transparent;
 }
 
-/*Carousel
----------------------------------- */
+/*Carousel---------------------------------- */
 .top.carousel-indicators {
   bottom: auto;
   top: 10px;
@@ -4545,8 +4504,7 @@ fieldset[disabled] .form-control {
   z-index: 4;
 }
 
-/*Badges
----------------------------------- */
+/*Badges---------------------------------- */
 .main-navigation .badge {
   position: absolute;
   top: 13px;
@@ -4569,8 +4527,7 @@ fieldset[disabled] .form-control {
   }
 }
 
-/*Pace (Page loader)
----------------------------------- */
+/*Pace (Page loader)---------------------------------- */
 /*loader 1*/
 .page-loader-1 .page-wrapper {
   opacity: 0;
@@ -5090,10 +5047,8 @@ fieldset[disabled] .form-control {
   }
 }
 
-/* 6 Navigations
------------------------------------------------------------------------------ */
-/* 6.1 Light Version
------------------------------------------------------------------------------ */
+/* 6 Navigations----------------------------------------------------------------------------- */
+/* 6.1 Light Version----------------------------------------------------------------------------- */
 /* mobile menu */
 .navbar.navbar-default {
   -webkit-border-radius: 3px;
@@ -5287,8 +5242,7 @@ header.full-width .dropdown-menu .dropdown-menu.to-left {
   }
 }
 
-/* Mega Menu
------------------------------- */
+/* Mega Menu------------------------------ */
 .mega-menu.dropdown {
   position: static;
 }
@@ -5386,8 +5340,7 @@ header .dropdown-menu > li.active > a i.fa-circle-o:before {
   text-decoration: none;
 }
 
-/* Arrow for parent menu item
------------------------------- */
+/* Arrow for parent menu item------------------------------ */
 .dropdown > a:before {
   font-family: 'FontAwesome';
   content: "\f107";
@@ -5436,8 +5389,7 @@ header .dropdown-menu > li.active > a i.fa-circle-o:before {
   color: #09afdf;
 }
 
-/* Dropdown animations
------------------------------- */
+/* Dropdown animations------------------------------ */
 .animated.main-navigation .navbar-nav .open .dropdown-menu,
 #offcanvas.animated .open .dropdown-menu,
 #offcanvas.animated .dropdown-menu .open .dropdown-menu {
@@ -5467,8 +5419,7 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   }
 }
 
-/* Mobile Menu
------------------------------- */
+/* Mobile Menu------------------------------ */
 /* mobile menu toggle button on hover/focus */
 .navbar-default .navbar-toggle {
   border-color: #ccc;
@@ -5597,8 +5548,7 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
 
 /* Small devices (tablets, phones less than 767px) */
 @media (max-width: 767px) {
-  /* Mobile menu
-  ------------------------------ */
+  /* Mobile menu  ------------------------------ */
   /* active item */
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
@@ -5672,8 +5622,7 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   }
 }
 
-/* 6.2 Dark Version
------------------------------------------------------------------------------ */
+/* 6.2 Dark Version----------------------------------------------------------------------------- */
 /* first level menu item */
 .dark.header .navbar.navbar-default {
   border-color: rgba(0, 0, 0, 0.3);
@@ -5783,8 +5732,7 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   color: #ffffff;
 }
 
-/* Mobile Menu
------------------------------- */
+/* Mobile Menu------------------------------ */
 /*Dark mobile menu toggle button*/
 .dark .navbar-default .navbar-toggle {
   border-color: rgba(0, 0, 0, 0.7);
@@ -5860,8 +5808,7 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   }
 }
 
-/* 6.3 Subfooter navigation
------------------------------------------------------------------------------ */
+/* 6.3 Subfooter navigation----------------------------------------------------------------------------- */
 .subfooter .navbar {
   margin: 0;
   min-height: 0;
@@ -5954,8 +5901,7 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   }
 }
 
-/* 6.4 Offcanvas navigation
------------------------------------------------------------------------------ */
+/* 6.4 Offcanvas navigation----------------------------------------------------------------------------- */
 .offcanvas {
   background-color: #f5f5f5;
   border-color: #f1f1f1;
@@ -6105,8 +6051,7 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   content: "\f107";
 }
 
-/* 6.5 Full page navigation
------------------------------------------------------------------------------ */
+/* 6.5 Full page navigation----------------------------------------------------------------------------- */
 .full-page .header-container header {
   background-color: rgba(255, 255, 255, 0.1);
   border-bottom: none;
@@ -6125,8 +6070,7 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   padding-bottom: 15px;
 }
 
-/* 6.6 Misc
------------------------------------------------------------------------------ */
+/* 6.6 Misc----------------------------------------------------------------------------- */
 .dropdown-header {
   color: #333333;
   margin: -1px -1px 0 0;
@@ -6136,10 +6080,8 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   background-color: rgba(0, 0, 0, 0.02);
 }
 
-/* 7 Blocks/Widgets
------------------------------------------------------------------------------ */
-/* Logo, Site Slogan
----------------------------------- */
+/* 7 Blocks/Widgets----------------------------------------------------------------------------- */
+/* Logo, Site Slogan---------------------------------- */
 #logo img:hover,
 #logo-mobile img:hover {
   opacity: 0.8;
@@ -6240,8 +6182,7 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   }
 }
 
-/* Social icons block
----------------------------------- */
+/* Social icons block---------------------------------- */
 .social-links {
   list-style: none;
   font-size: 0;
@@ -6723,8 +6664,7 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   color: #ffffff;
 }
 
-/*Header Dropdowns (search, cart etc)
----------------------------------- */
+/*Header Dropdowns (search, cart etc)---------------------------------- */
 /*Header Dropdowns*/
 .transparent-header .header-dropdown-buttons .btn-group > .btn {
   background-color: transparent;
@@ -6883,8 +6823,7 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   }
 }
 
-/*Dark Dropdowns
----------------------------------- */
+/*Dark Dropdowns---------------------------------- */
 .dark.btn-group .dropdown-menu {
   background-color: #333333;
   border: 1px solid #424242;
@@ -6924,8 +6863,7 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   color: #ffffff;
 }
 
-/* Login/Register Forms
----------------------------------- */
+/* Login/Register Forms---------------------------------- */
 .form-block {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -6957,8 +6895,7 @@ header.full-width .animated.main-navigation .dropdown-menu .open .dropdown-menu.
   }
 }
 
-/* Latest tweets block
----------------------------------- */
+/* Latest tweets block---------------------------------- */
 ul.tweets {
   list-style: none;
   padding: 0;
@@ -6989,8 +6926,7 @@ ul.tweets li span {
   color: #777777;
 }
 
-/* Media
----------------------------------- */
+/* Media---------------------------------- */
 .media {
   margin-top: 0;
   margin-bottom: 25px;
@@ -7029,8 +6965,7 @@ h6.media-heading {
   border-color: transparent;
 }
 
-/* Testimonials
----------------------------------- */
+/* Testimonials---------------------------------- */
 .testimonial {
   padding: 20px 0;
 }
@@ -7066,8 +7001,7 @@ h6.media-heading {
   margin-bottom: 15px;
 }
 
-/* Clients
----------------------------------- */
+/* Clients---------------------------------- */
 .clients-container {
   text-align: center;
 }
@@ -7088,8 +7022,7 @@ h6.media-heading {
   margin: 0px auto;
 }
 
-/* Full Width Content
----------------------------------- */
+/* Full Width Content---------------------------------- */
 .full-width-section {
   position: relative;
 }
@@ -7289,8 +7222,7 @@ h6.media-heading {
   }
 }
 
-/* Call to action
----------------------------------- */
+/* Call to action---------------------------------- */
 .call-to-action h1,
 .call-to-action a {
   margin: 0;
@@ -7307,16 +7239,14 @@ h6.media-heading {
   }
 }
 
-/* Counters
----------------------------------- */
+/* Counters--------------------------------- */
 .counter {
   display: block;
   font-size: 32px;
   line-height: 1;
 }
 
-/* Pricing tables
----------------------------------- */
+/* Pricing tables---------------------------------- */
 .pricing-tables {
   margin: 60px 0 0;
 }
@@ -7479,8 +7409,7 @@ h6.media-heading {
   }
 }
 
-/* Google maps
----------------------------------- */
+/* Google maps-------- */
 #map-canvas {
   height: 450px;
 }
@@ -7509,8 +7438,7 @@ h6.media-heading {
   max-width: inherit;
 }
 
-/* Tags cloud block
----------------------------------- */
+/* Tags cloud block---------------------------------- */
 .tags-cloud {
   font-size: 0;
 }
@@ -7552,16 +7480,14 @@ h6.media-heading {
   text-decoration: none;
 }
 
-/* Credit Carts Block
----------------------------------- */
+/* Credit Carts Block---------------------------------- */
 .icons-block i {
   display: inline-block;
   font-size: 30px;
   color: #999999;
 }
 
-/* Isotope filtering
----------------------------------- */
+/* Isotope filtering---------------------------------- */
 .isotope-container {
   display: none;
 }
@@ -7578,8 +7504,7 @@ h6.media-heading {
   }
 }
 
-/* Affix Menu
----------------------------------- */
+/* Affix Menu---------------------------------- */
 .sidebar.affix {
   position: static;
 }
@@ -7638,8 +7563,7 @@ h6.media-heading {
   }
 }
 
-/* Scroll to top
----------------------------------- */
+/* Scroll to top---------------------------------- */
 .scrollToTop {
   color: #ffffff;
   position: fixed;
@@ -7681,8 +7605,7 @@ h6.media-heading {
   }
 }
 
-/* 8 Main Slideshow
------------------------------------------------------------------------------ */
+/* 8 Main Slideshow----------------------------------------------------------------------------- */
 .slider-banner-container,
 .slider-revolution-5-container {
   width: 100%;
@@ -8068,19 +7991,7 @@ h6.media-heading {
   color: #ffffff;
 }
 
-
-  /* Theme Name:The Project - Responsive Website Template
-Author:HtmlCoder
-Author URI:http://www.htmlcoder.me
-Author e-mail:htmlcoder.me@gmail.com
-Version:1.3.0
-Created:May 2015
-License URI:http://support.wrapbootstrap.com/
-File Description:Light Blue Skin
-*/
-/* 1- Typography
--------------------------------------------------
--------------------------------------------------*/
+/* 1- Typography------------------------------------------------------------------*/
 a {
     color: #09afdf;
   }
@@ -8104,8 +8015,7 @@ a {
     color: #09afdf;
   }
 
-  /* Tables
-  ---------------------------------- */
+  /* Tables  ---------------------------------- */
   .table.table-colored {
     border-bottom-color: #09afdf;
   }
@@ -8116,9 +8026,7 @@ a {
     color: #ffffff;
   }
 
-  /* 2- Layout
-  -------------------------------------------------
-  -------------------------------------------------*/
+  /* 2- Layout -------------------------------------------------*/
   .header-top.dark {
     background-color: #2e3537;
     border-bottom: 1px solid #252a2c;
@@ -8176,20 +8084,15 @@ a {
     background-color: #09afdf;
   }
 
-  /* 4 Pages
-  -------------------------------------------------
-  -------------------------------------------------*/
+  /* 4 Pages-------------------------------------------------*/
   /* Blog Timeline layout
   ---------------------------------- */
   .timeline-date-label:after {
     background-color: #09afdf;
   }
 
-  /* 5 Components
-  -------------------------------------------------
-  -------------------------------------------------*/
-  /* Buttons
-  ---------------------------------- */
+  /* 5 Components---------------------------*/
+  /* Buttons-------------- */
   /*Default Button*/
   .btn-default {
     color: #ffffff;
@@ -8363,16 +8266,14 @@ a {
     background: #0c9ec7;
   }
 
-  /* Image overlay
-  ---------------------------------- */
+  /* Image overlay  ---------------------------------- */
   .overlay-top a,
   .overlay-bottom a,
   .overlay-to-top a {
     color: #ffffff;
   }
 
-  /* Pager
-  ---------------------------------- */
+  /* Pager  ---------------------------------- */
   ul.pagination li > a:hover,
   ul.pagination li > a:focus {
     background-color: transparent;
@@ -8389,14 +8290,12 @@ a {
     border-color: #09afdf;
   }
 
-  /* Breadcrumb
-  ---------------------------------- */
+  /* Breadcrumb  ---------------------------------- */
   .banner .breadcrumb > li a:hover {
     color: #0c9ec7;
   }
 
-  /* Nav pills
-  ---------------------------------- */
+  /* Nav pills  ---------------------------------- */
   .nav-pills.style-2 > li.active > a,
   .nav-pills.style-2 > li.active > a:hover,
   .nav-pills.style-2 > li.active > a:focus,
@@ -8451,8 +8350,7 @@ a {
     color: #0c9ec7;
   }
 
-  /* Collapse
-  ---------------------------------- */
+  /* Collapse  ---------------------------------- */
   /*Style 2*/
   .collapse-style-2 .panel-heading a {
     color: #ffffff;
@@ -8463,14 +8361,13 @@ a {
     color: inherit;
   }
 
-  /* Progress bars
-  ---------------------------------- */
+  /* Progress bars  ---------------------------------- */
   .progress-bar-default {
     background-color: #09afdf;
   }
 
 
-  ---------------------------------- */
+
   .icon.default-bg {
     background-color: #09afdf;
     color: #ffffff;
@@ -8481,16 +8378,14 @@ a {
     color: #09afdf;
   }
 
-  /*Listing Items
-  ---------------------------------- */
+  /*Listing Items  ---------------------------------- */
   .listing-item .overlay-container .badge {
     border: 1px solid #09afdf;
     background-color: rgba(255, 255, 255, 0.95);
     color: #09afdf;
   }
 
-  /*Modals
-  ---------------------------------- */
+  /*Modals  ---------------------------------- */
   .modal-content .modal-header {
     background-color: #09afdf;
   }
@@ -8502,8 +8397,7 @@ a {
 
 
 
-  /*Pace (Page loader)
-  ---------------------------------- */
+  /*Pace (Page loader)  --------------------------------- */
   .page-loader-1 .pace {
     border: 1px solid #09afdf;
   }
@@ -8544,11 +8438,8 @@ a {
     background: #09afdf;
   }
 
-  /* 6 Navigations
-  -------------------------------------------------
-  -------------------------------------------------*/
-  /* 6.1 Light Version
-  ---------------------------------- */
+  /* 6 Navigations-----------------------*/
+  /* 6.1 Light Version------------ */
   /* first level menu item on hover/focus */
   .navbar-default .navbar-nav > li > a:hover,
   .navbar-default .navbar-nav > li > a:focus,
@@ -8594,8 +8485,7 @@ a {
     border-color: #f7f7f7;
   }
 
-  /* Mega Menu
-  ------------------------------ */
+  /* Mega Menu  ------------------------------ */
   header:not(.dark) .mega-menu .menu > li > a:hover i,
   header:not(.dark) .dropdown-menu > li > a:hover i,
   header:not(.dark) .mega-menu .menu > li.active > a i,
@@ -8612,8 +8502,7 @@ a {
     text-decoration: none;
   }
 
-  /* Arrow for parent menu item
-  ------------------------------ */
+  /* Arrow for parent menu item  ------------------------------ */
   .header:not(.dark) .active.dropdown > a:before,
   .header:not(.dark).centered .active.dropdown > a:before {
     color: #09afdf;
@@ -8632,8 +8521,7 @@ a {
     color: #09afdf;
   }
 
-  /* Mobile Menu
-  ------------------------------ */
+  /* Mobile Menu  ------------------------------ */
   /* mobile menu toggle button on hover/focus */
   .navbar-default .navbar-toggle {
     border-color: #ccc;
@@ -8655,8 +8543,7 @@ a {
 
   /* Small devices (tablets, phones less than 767px) */
   @media (max-width: 767px) {
-    /* Mobile menu
-      ------------------------------ */
+    /* Mobile menu---------------- */
     /* active item */
     .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
     .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
@@ -8685,8 +8572,7 @@ a {
     }
   }
 
-  /* 6.2 Dark Version
-  ------------------------------ */
+  /* 6.2 Dark Version----------- */
   /* first level active menu item when opened */
   .dark.header .main-navigation .navbar-nav > .open > a,
   .dark.header .main-navigation .navbar-nav > .open > a:hover,
@@ -8736,8 +8622,7 @@ a {
     }
   }
 
-  /* 6.3 Subfooter navigation
-  ------------------------------ */
+  /* 6.3 Subfooter navigation */
   .subfooter .navbar-default .nav > li > a:hover,
   .subfooter .navbar-default .nav > .active > a:hover,
   .subfooter .navbar-default .nav > .active > a:focus {
@@ -8746,8 +8631,7 @@ a {
     color: #0c9ec7;
   }
 
-  /* 6.3 Offcanvas navigation
-  ------------------------------ */
+  /* 6.3 Offcanvas navigation ------------------------------ */
   #offcanvas .nav .open > a,
   #offcanvas .nav .open > a:hover,
   #offcanvas .nav .open > a:focus,
@@ -8767,11 +8651,8 @@ a {
     color: #09afdf;
   }
 
-  /* 7 Blocks/Widgets
-  -------------------------------------------------
-  -------------------------------------------------*/
-  /* Social icons block
-  ------------------------------ */
+  /* 7 Blocks/Widgets--------------------------------------------------------------------------------------------------*/
+  /* Social icons block ------------------------------ */
   .social-links li a {
     border: 1px solid #e7e7e7;
     color: #cdcdcd;
@@ -8828,8 +8709,7 @@ a {
     border: none;
   }
 
-  /* Full Width Content
-  ---------------------------------- */
+  /* Full Width Content--------------------- */
   /* Medium devices (tablets, phones) */
   @media (max-width: 1199px) {
     .full-width-section:not(.no-image) .full-text-container.default-bg {
@@ -8837,8 +8717,7 @@ a {
     }
   }
 
-  /*Header Dropdowns (search, cart etc)
-  ---------------------------------- */
+  /*Header Dropdowns (search, cart etc)----------------------------- */
   .header-dropdown-buttons .btn-group > .btn {
     background-color: #f2f2f2;
     border: 1px solid #e9e9e9;
@@ -8861,23 +8740,20 @@ a {
     background: #09afdf;
   }
 
-  /* Media
-  ---------------------------------- */
+  /* Media---------------------------- */
   .media:hover .icon {
     background-color: transparent;
     color: #09afdf;
     border: 1px solid #09afdf;
   }
 
-  /* Pricing tables
-  ---------------------------------- */
+  /* Pricing tables----------------------- */
   .popover-title {
     background-color: #09afdf;
     color: #ffffff;
   }
 
-  /* Tags cloud block
-  ---------------------------------- */
+  /* Tags cloud block------------------------ */
   .tag a {
     color: #ffffff;
     background-color: #09afdf;
@@ -8891,16 +8767,12 @@ a {
     text-decoration: none;
   }
 
-  /* 8 Main Slideshow
-  -------------------------------------------------
-  -------------------------------------------------*/
+  /* 8 Main Slideshow--------------------------------*/
   .tp-bannertimer {
     background-color: rgba(9, 175, 223, 0.8);
   }
 
-  /* 9 Owl Carousel
-  -------------------------------------------------
-  -------------------------------------------------*/
+  /* 9 Owl Carousel-----------------------------*/
   .content-slider-with-large-controls .owl-buttons .owl-prev:after,
   .content-slider-with-large-controls-autoplay .owl-buttons .owl-prev:after {
     color: #09afdf;
@@ -8911,9 +8783,7 @@ a {
     color: #09afdf;
   }
 
-  /* 10 Full Page
-  -------------------------------------------------
-  -------------------------------------------------*/
+  /* 10 Full Page-----------------------------*/
   #fp-nav ul li a span,
   .fp-slidesNav ul li a span {
     background: rgba(9, 175, 223, 0.8);
@@ -8922,10 +8792,8 @@ a {
   /*# sourceMappingURL=light_blue.css.map */
 
 
-/* 1 Typography
------------------------------------------------------------------------------ */
-/*Fonts
----------------------------------- */
+/* 1 Typography--------------------------------------------------------- */
+/*Fonts------------------ */
 h1,
 h2,
 h3,
@@ -8944,8 +8812,7 @@ body {
   font-family: "Pacifico", cursive, sans-serif;
 }
 
-/*Typography
----------------------------------- */
+/*Typography--------------------- */
 html {
   height: 100%;
 }
@@ -9230,5 +9097,3 @@ pre {
 .dark hr {
   border-color: #333333;
 }
-
-/*# sourceMappingURL=typography-default.css.map */
