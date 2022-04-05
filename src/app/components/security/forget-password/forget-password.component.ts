@@ -23,8 +23,6 @@ export class ForgetPasswordComponent implements OnInit {
     })
   }
   resetPassword() {
-    console.log(this.form.value);
-
     this.spinner.show()
     // stop here if form is invalids
     if (this.form.invalid) {
@@ -43,11 +41,18 @@ export class ForgetPasswordComponent implements OnInit {
     }
 
     this.authService.forgotPasssword(this.form.value).subscribe((res: any) => {
-      console.log(res);
       this.spinner.hide()
+    if(res?.code==200){
+      this.toastr.success("",res.message)
+      this.router.navigate(['login'])
+    }else{
+      this.toastr.error("","An error occurred!")
+    }
+
     },
       (error: any) => {
-        console.log(error);
+        this.spinner.hide()
+        this.toastr.error("",error.error.detail)
 
       }
     )

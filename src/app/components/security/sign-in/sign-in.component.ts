@@ -15,6 +15,7 @@ export class SignInComponent implements OnInit {
   constructor(private router:Router,private fb:FormBuilder, private authService:AuthService, private spinner:NgxSpinnerService, private toastr:ToastrService) { }
 
   ngOnInit() {
+    sessionStorage.clear()
     this.form=this.fb.group({
       username:['',[Validators.required]],
       password:['',[Validators.required]],
@@ -50,11 +51,18 @@ export class SignInComponent implements OnInit {
     }
 
     this.authService.login(this.form.value).subscribe((res: any) => {
-      console.log(res);
       this.spinner.hide()
+      if (res.access_token) {
+        sessionStorage.setItem('token', res.access_token);
+        this.toastr.success("", "Login Successful")
+        this.router.navigate(['home'])
+      }
+
     },
       (error: any) => {
-        console.log(error);
+        this.spinner.hide()
+        this.toastr.error("Try Again", error.error.detail)
+        // console.log(error);
 
       }
     )

@@ -1,123 +1,28 @@
-<div class="container" style="margin-top: 100px;">
-  <div class="mb-4">
-    <div class="row">
+<div class="container mt-4">
+  <h4 class="mb-3">Transactions History</h4>
+<table style="background: white;" class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Trans Type</th>
+      <th scope="col">Credit Amt</th>
+      <th scope="col">Amount(USD)</th>
+      <th scope="col">Tx</th>
+      <th scope="col">Reciever</th>
+      <th scope="col">Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let list of transactionList;let i=index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{list?.transactionType}}</td>
+      <td>{{list?.creditAmount}}</td>
+      <td>{{list?.amountUSD}}</td>
+      <td>{{list?.tx}}</td>
+      <td>{{list?.paymentAddress}}</td>
+    </tr>
 
-      <div class=" p-3">
-        <div class="row text-center">
-          <h4 style="color: gray;"><i class="fa fa-user mr-3"></i> @Username</h4>
-          <p><i style="color: green;" class="fa fa-credit-card mr-3"></i> Credit: <span
-              style="color: green;font-weight: 600;">9823</span></p>
+  </tbody>
+</table>
 
-
-        </div>
-
-        <div class="row text-center">
-          <div class="col-md-6">
-
-            <h5><i style="color: coral;" class="fa fa-street-view mr-3"></i> Current IP: <span
-                style="color: red;font-weight: 600;text-decoration: underline;">123.432.123.423</span></h5>
-          </div>
-
-          <div class="col-md-6">
-            <h5><i class="fa fa-globe " style="color: red;"></i> Proxy IP: <span style="color: red;">00000000</span>
-            </h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-  <div style="margin-bottom: 30px;" class="row mb-4">
-    <h3  style="font-family: 'Courier New', Courier, monospace;margin-left: 20px;font-weight: 900;"> ACCOUNT TRANSACTIONS </h3>
-    <div class="col-md-8">
-
-      <select class="form-control" aria-label=".form-select-lg example">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
-
-
-
-    </div>
-    <div class="col-sm-2">
-      <button class="btn btn-dark" style="border: 2px solid;width:100%"> Filter</button>
-
-    </div>
-  </div>
-  <div class="card">
-
-    <table class="table table-bordered table-stripe">
-      <thead >
-        <tr>
-          <th scope="col">S/N</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Missing Header</th>
-          <th scope="col">Another Header</th>
-          <th scope="col">Another One </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>Hello</td>
-          <td>Hello</td>
-          <td>Hello</td>
-        </tr>
-
-        <tr>
-          <th scope="row">2</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>Hello</td>
-          <td>Hello</td>
-          <td>Hello</td>
-        </tr>
-
-        <tr>
-          <th scope="row">3</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>Hello</td>
-          <td>Hello</td>
-          <td>Hello</td>
-        </tr>
-
-        <tr>
-          <th scope="row">4</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>Hello</td>
-          <td>Hello</td>
-          <td>Hello</td>
-        </tr>
-
-        <tr>
-          <th scope="row">5</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>Hello</td>
-          <td>Hello</td>
-          <td>Hello</td>
-        </tr>
-
-
-      </tbody>
-    </table>
-
-
-
-
-
-  </div>
 </div>

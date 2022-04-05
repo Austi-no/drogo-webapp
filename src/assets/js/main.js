@@ -4,7 +4,7 @@
 
 File:           JS Core
 Version:        1.0
-Last change:    00/00/00 
+Last change:    00/00/00
 -------------------------------------------------------------------------------- */
 (function() {
 
@@ -12,16 +12,15 @@ Last change:    00/00/00
 
 	var Wizard = {
 		init: function() {
-			this.Basic.init();  
+			this.Basic.init();
 		},
 
 		Basic: {
 			init: function() {
 
 				this.ratings();
-				this.NeedJobSlide();
 				this.FileUpload();
-				
+
 			},
 			ratings: function (){
 				var __slice = [].slice;
@@ -139,38 +138,7 @@ Last change:    00/00/00
 					});
 				});
 			},
-			NeedJobSlide: function (){
-				$('#need-job-slide-id').owlCarousel({
-					margin:30,
-					responsiveClass:true,
-					nav: true,
-					dots: false,
-					loop:true,
-					center: true,
-					autoHeight: true,
-					autoplay: false,
-					navText:["<i class='fas fa-arrow-left'></i>","<i class='fas fa-arrow-right'></i>"],
-					smartSpeed: 1000,
-					responsive:{
-						0:{
-							items:1,
-						},
-						400:{
-							items:1,
-						},
-						600:{
-							items:1,
-						},
-						700:{
-							items:2,
-						},
-						1000:{
-							items:3,
 
-						},
-					},
-				})
-			},
 			FileUpload: function (){
 				$("#customFile").change(function() {
 					filename = this.files[0].name

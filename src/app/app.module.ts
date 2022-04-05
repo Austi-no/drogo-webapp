@@ -1,3 +1,4 @@
+import { TicketComponent } from './components/ticket/ticket.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -18,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { AuthInterceptor } from './components/security/helpers/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     HeaderComponent,
     DashbaordComponent,
     LandingPageComponent,
-    FooterComponent
+    FooterComponent,
+    TicketComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     NgxSpinnerModule,
     ToastrModule.forRoot(),
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

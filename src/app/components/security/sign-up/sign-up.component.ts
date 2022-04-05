@@ -59,12 +59,17 @@ export class SignUpComponent implements OnInit {
     }
 
     this.authService.register(this.form.value).subscribe((res: any) => {
-      console.log(res);
       this.spinner.hide()
+      if (res.access_token) {
+        this.toastr.success("", "Registration Successful")
+        this.router.navigate(['login'])
+      }
+
     },
       (error: any) => {
         console.log(error);
-
+        this.spinner.hide()
+        this.toastr.error("",error.error.detail)
       }
     )
   }

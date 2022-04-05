@@ -1,3 +1,8 @@
+.table-bordered td, .table-bordered th {
+  border: 1px solid #dee2e6;
+  padding: 10px;
+}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
@@ -6,13 +11,13 @@ body {
     font-family: 'Roboto', sans-serif
 }
 
-.sendCreditModal .card {
+.conversationModal .card {
     width: 300px;
     border: none;
     border-radius: 15px
 }
 
-.sendCreditModal .adiv {
+.conversationModal .adiv {
     background: #09afdf;
     border-radius: 15px;
     border-bottom-right-radius: 0;
@@ -21,32 +26,32 @@ body {
     height: 46px
 }
 
-.sendCreditModal .chat {
+.conversationModal .chat {
     border: none;
     background: #E2FFE8;
     font-size: 10px;
     border-radius: 20px
 }
 
-.sendCreditModal .bg-white {
+.conversationModal .bg-white {
     border: 1px solid #E7E7E9;
     font-size: 10px;
     border-radius: 20px
 }
 
 
-.sendCreditModal .form-control {
+.conversationModal .form-control {
     border-radius: 12px;
     border: 1px solid #F0F0F0;
-    font-size: 14px
+    font-size: 8px
 }
 
-.sendCreditModal .form-control:focus {
+.conversationModal .form-control:focus {
     box-shadow: none
 }
 
-.sendCreditModal .form-control::placeholder {
-    font-size: 14px;
+.conversationModal .form-control::placeholder {
+    font-size: 8px;
     color: #C4C4C4
 }
 
@@ -66,18 +71,4 @@ body {
   border: none !important;
   border-radius: 0rem !important;
   outline: 0;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #09afdf !important;
-  border-color: #09afdf  !important;
-
-}
-
-.btn {
-  float: right !important;
-  padding: 0.2rem 0.75rem !important;
-  font-size: 0.7rem !important;
-
 }

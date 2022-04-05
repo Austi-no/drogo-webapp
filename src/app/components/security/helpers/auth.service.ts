@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 
@@ -15,7 +15,14 @@ export class AuthService {
   }
 
   login(value: any) {
-    return this.http.post(`${this.baseUrl}/login`, value)
+    let body = new URLSearchParams();
+    body.set('username', value.username);
+    body.set('password', value.password);
+
+    let options = {
+      headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
+    };
+    return this.http.post(`${this.baseUrl}/login`, body.toString(), options)
   }
 
   forgotPasssword(value: any) {

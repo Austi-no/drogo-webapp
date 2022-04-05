@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+declare const sidebarToggle: any;
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,13 +9,15 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    sidebarToggle()
+
   }
   toggle() {
     //On Full Screen
-    console.log("clicked")
-    var wrapper = document.querySelector(".menu-toggle-btn");
-    wrapper?.classList.toggle("sidebar-nav-wrapper");
+    // console.log("clicked")
+    // var wrapper = document.querySelector(".menu-toggle-btn");
+    // wrapper?.classList.toggle("sidebar-nav-wrapper");
 
   }
 }

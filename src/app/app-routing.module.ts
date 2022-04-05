@@ -1,3 +1,5 @@
+import { TicketComponent } from './components/ticket/ticket.component';
+import { AuthGuard } from './components/security/helpers/auth.guard';
 import { LandingPageComponent } from './layout/landing-page/landing-page.component';
 import { DashbaordComponent } from './layout/dashbaord/dashbaord.component';
 import { TransactionsComponent } from './components/transactions/transactions.component';
@@ -22,12 +24,11 @@ const routes: Routes = [
     path: 'forget-password', component: ForgetPasswordComponent
   },
   {
-    path: 'transactions', component: TransactionsComponent
-  },
-  {
     path: "home", component: HomeComponent,
     children: [
-      { path: '', component: DashbaordComponent },
+      { path: '', component: DashbaordComponent, canActivate: [AuthGuard] },
+      { path: "transactions", component: TransactionsComponent, canActivate: [AuthGuard] },
+      { path: "ticket", component: TicketComponent, canActivate: [AuthGuard] },
     ]
   }
 ];
