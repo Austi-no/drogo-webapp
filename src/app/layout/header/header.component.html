@@ -34,7 +34,7 @@
                   >
                     <div class="profile-info">
                       <div class="info">
-                        <h6>Austin</h6>
+                        <h6>{{accountDetail?.username}}</h6>
                         <div class="image">
                           <img
                             src="assets/images/avatar.png"
@@ -66,8 +66,8 @@
                         <i class="fa fa-user"></i> View Profile
                       </a>
                     </li>
-                    <li>
-                      <a > <i class="fa fa-sign-out-alt"></i> Sign Out </a>
+                    <li (click)="logout()">
+                      <a > <i class="fa fa-sign-out-alt"></i> Logout </a>
                     </li>
                   </ul>
                 </div>
