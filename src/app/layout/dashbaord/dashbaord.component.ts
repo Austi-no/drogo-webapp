@@ -12,7 +12,8 @@ export class DashbaordComponent implements OnInit {
   accountDetail: any;
   transactionList: any = [];
   amountOfCredits: any
-  username: any
+  username: any;
+  redeemCode:any
 
   constructor(private service: ApiService, private spinner: NgxSpinnerService, private toastr: ToastrService) { }
 

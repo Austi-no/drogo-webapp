@@ -12,11 +12,13 @@ import { Router } from '@angular/router';
 })
 export class SignInComponent implements OnInit {
   form!:FormGroup
+  public captchaResolved : boolean = false;
   constructor(private router:Router,private fb:FormBuilder, private authService:AuthService, private spinner:NgxSpinnerService, private toastr:ToastrService) { }
 
   ngOnInit() {
     sessionStorage.clear()
     this.form=this.fb.group({
+      recaptchaReactive:[Validators.required],
       username:['',[Validators.required]],
       password:['',[Validators.required]],
     })
@@ -67,5 +69,9 @@ export class SignInComponent implements OnInit {
       }
     )
   }
+
+  checkCaptcha(captchaResponse : string) {
+    this.captchaResolved = (captchaResponse && captchaResponse.length > 0) ? true : false
+}
 
 }

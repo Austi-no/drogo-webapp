@@ -1,3 +1,5 @@
+import { ProfileComponent } from './components/security/profile/profile.component';
+import { BuyCreditComponent } from './components/buy-credit/buy-credit.component';
 import { TicketComponent } from './components/ticket/ticket.component';
 import { AuthGuard } from './components/security/helpers/auth.guard';
 import { LandingPageComponent } from './layout/landing-page/landing-page.component';
@@ -29,6 +31,8 @@ const routes: Routes = [
       { path: '', component: DashbaordComponent, canActivate: [AuthGuard] },
       { path: "transactions", component: TransactionsComponent, canActivate: [AuthGuard] },
       { path: "ticket", component: TicketComponent, canActivate: [AuthGuard] },
+      { path: "buyCredit", component: BuyCreditComponent, canActivate: [AuthGuard] },
+      { path: "profile", component: ProfileComponent, canActivate: [AuthGuard] },
     ]
   }
 ];

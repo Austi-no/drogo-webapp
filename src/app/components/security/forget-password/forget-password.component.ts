@@ -12,10 +12,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForgetPasswordComponent implements OnInit {
   form!:FormGroup
+  public captchaResolved : boolean = false;
   constructor(private router: Router,private authService:AuthService,private fb:FormBuilder, private spinner:NgxSpinnerService,private toastr:ToastrService) { }
 
   ngOnInit() {
     this.form=this.fb.group({
+      recaptchaReactive:[Validators.required],
       username:['',[Validators.required]],
       new_password:['',[Validators.required]],
       securityQuestion:['',[Validators.required]],
@@ -61,4 +63,8 @@ export class ForgetPasswordComponent implements OnInit {
   login() {
     this.router.navigate(['login'])
   }
+
+  checkCaptcha(captchaResponse : string) {
+    this.captchaResolved = (captchaResponse && captchaResponse.length > 0) ? true : false
+}
 }

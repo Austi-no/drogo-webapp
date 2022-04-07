@@ -30,22 +30,36 @@
                 </div>
               </div>
 
+           <div class="form-row">
+            <div class="col-md-4">
 
+            </div>
+            <div class="col-md-8">
+   <re-captcha (resolved)="checkCaptcha($event)" formControlName="recaptchaReactive" siteKey="6LfBY1EfAAAAAEhex8WiYI49Qi9RR3KeLfC4IWm5">
+            </re-captcha>
+            </div>
+
+           </div>
 
               <div class="form-row mb-3 has-icon">
-                <div class="col-md-4"></div>
+                <div class="col-md-4">
+
+                </div>
                 <div class="col-sm-8">
-                  <button style="width: 50%;background: #09afdf;color: white;" type="button" class="btn  mb-4"
+                  <button [disabled]="!captchaResolved" style="width: 50%;background: #09afdf;color: white;" type="button" class="btn  mb-4"
                     (click)="login()">Login <span class="ml-4 fa fa-arrow-right"></span></button>
 
-                  <p class="lead text-muted" style="font-size: 12px;"><a
-                    (click)="forgotPassword()" style="cursor: pointer; color: #09afdf;font-weight: 500;text-decoration: underline;">Forgot your Password</a>
-                </p>
-                <p class="lead text-muted" style="font-size: 14px;"> Don't have an account? <a
-                  (click)="register()" style="cursor: pointer; color: #09afdf;font-weight: 500;text-decoration: underline;">Register</a>
-              </p>
+                  <p class="lead text-muted" style="font-size: 12px;"><a (click)="forgotPassword()"
+                      style="cursor: pointer; color: #09afdf;font-weight: 500;text-decoration: underline;">Forgot your
+                      Password</a>
+                  </p>
+                  <p class="lead text-muted" style="font-size: 14px;"> Don't have an account? <a (click)="register()"
+                      style="cursor: pointer; color: #09afdf;font-weight: 500;text-decoration: underline;">Register</a>
+                  </p>
                 </div>
+
               </div>
+
             </form>
           </div>
           <p class="mt-20 text-white mt-3 mb-5">Copyright © 2022 The Drogo - anonymity expert on the Internet</p>

@@ -10,7 +10,10 @@ export class ApiService {
 
 
 
+
+
   baseUrl: string = environment.backend.baseURL;
+  publicUrl: string = environment.backend.publicURL;
   constructor(private http: HttpClient) { }
 
   createTicket(value: any) {
@@ -31,5 +34,13 @@ export class ApiService {
 
   sendCredit(obj: any) :any{
     return this.http.post(`${this.baseUrl}/sendCredits`,obj)
+  }
+
+  getPricing() {
+    return this.http.get(`${this.publicUrl}/pricing`)
+  }
+
+  payBuyCredit(id: any) {
+    return this.http.get(`${this.baseUrl}/payCredits/${id}`)
   }
 }

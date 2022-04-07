@@ -20,6 +20,10 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { AuthInterceptor } from './components/security/helpers/auth.interceptor';
+import { BuyCreditComponent } from './components/buy-credit/buy-credit.component';
+import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
+import { ProfileComponent } from './components/security/profile/profile.component';
+import { ClipboardModule } from 'ngx-clipboard';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,9 @@ import { AuthInterceptor } from './components/security/helpers/auth.interceptor'
     DashbaordComponent,
     LandingPageComponent,
     FooterComponent,
-    TicketComponent
+    TicketComponent,
+    BuyCreditComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,7 @@ import { AuthInterceptor } from './components/security/helpers/auth.interceptor'
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgxSpinnerModule,
+    NgxSpinnerModule,RecaptchaModule,RecaptchaFormsModule,ClipboardModule,
     ToastrModule.forRoot(),
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],

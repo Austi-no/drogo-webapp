@@ -9,3 +9,7 @@
 .nav-item a{
   cursor: pointer;
 }
+
+.sidebar-nav-wrapper .sidebar-nav ul > .nav-item .active:active{
+  color: #09afdf !important;
+}

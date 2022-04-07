@@ -5,12 +5,12 @@
             <div class="col-lg-5 col-md-5 col-6">
               <div class="header-left d-flex align-items-center">
                 <div class="menu-toggle-btn mr-20">
-                  <button (click)="toggle()"
+                  <!-- <button (click)="toggle()"
                     id="menu-toggle"
                     class="main-btn primary-btn btn-hover"
                   >
                     <i class="fa fa-chevron-left me-2"></i> Menu
-                  </button>
+                  </button> -->
                 </div>
                 <div class="header-search d-none d-md-flex">
                   <form action="#">
@@ -44,7 +44,7 @@
                         </div>
                       </div>
                     </div>
-                    <i class="fa fa-angle-down"></i>
+                    <i style="cursor: pointer;" class="fa fa-bars"></i>
                   </button>
                   <ul
                     class="dropdown-menu dropdown-menu-end"
@@ -60,8 +60,13 @@
                       <i class="fa fa-ticket"></i> Ticket
                     </a>
                   </li>
+                  <li routerLink="/home/buyCredit">
+                    <a >
+                      <i class="fa fa-shopping-cart"></i> Buy Credit
+                    </a>
+                  </li>
                   <hr>
-                    <li>
+                    <li routerLink="/home/profile">
                       <a >
                         <i class="fa fa-user"></i> View Profile
                       </a>
