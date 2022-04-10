@@ -1,0 +1,54 @@
+<div class="text-center mt-4">
+  <h4 class="mb-3">Pricing List</h4>
+  <!-- <table style="background: white;" class="table table-sm table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Credit</th>
+      <th scope="col">Amount(USD)</th>
+      <th scope="col">Buy Credit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let list of pricingList;let i=index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{list?.name}}</td>
+      <td style="color: green;font-weight: 600;">{{list?.credits}}</td>
+      <td style="color: coral; font-weight: 600;">{{list?.amountUSD}}</td>
+      <td style="color:#09afdf ;"><i class="fa fa-shopping-cart"></i></td>
+
+    </tr>
+
+  </tbody>
+</table> -->
+
+  <div class="row justify-content-center">
+    <div class="col-md-3 col-sm-6 m-2 mt-3" *ngFor="let list of pricingList">
+      <div class="pricingTable">
+        <div class="pricingTable-header">
+          <i class="fa fa-shopping-cart"></i>
+          <div class="price-value">${{list.amountUSD}} <span class="month">Available</span> </div>
+        </div>
+        <h3 class="heading">{{list.name}}</h3>
+        <!-- <hr> -->
+        <div class="pricing-content">
+          <ul>
+
+            <li><b style="color: #0bbc88; font-size: 25px;">{{list.credits}}</b> Credits</li>
+            <li style="padding: 2px;"> numquam fuga ipsam,
+              nesciunt ex beatae!</li>
+          </ul>
+        </div>
+        <div style="cursor: pointer;" class="pricingTable-signup" (click)="buyCredit(list)">
+          <a>Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#09afdf" type="ball-scale-multiple" [fullScreen]="true">
+  <p style="color: #09afdf">Loading... </p>
+</ngx-spinner>

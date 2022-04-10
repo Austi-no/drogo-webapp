@@ -1,0 +1,92 @@
+/*** Booking ***/
+.booking {
+
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
+  url("/assets/img/fullscreen-bg.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+.has-icon .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-icon .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+.form-horizontal .control-label {
+  padding-top: 7px;
+  margin-bottom: 0;
+  /* text-align: right; */
+}
+
+
+.light-gray-bg.form-block h2, .light-gray-bg.form-block a, .light-gray-bg.form-block a:hover, .light-gray-bg.form-block {
+  color: #777777;
+}
+
+.form-block {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 630px;
+}
+.border-clear {
+  border: none !important;
+}
+.p-30 {
+  padding: 30px;
+}
+.light-gray-bg {
+  background-color: #fafafa;
+  border-top: 1px solid #f3f3f3;
+  border-bottom: 1px solid #f3f3f3;
+}
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form-control {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #ffffff;
+  height: 40px;
+  padding-right: 30px;
+  border-color: #e1e1e1;
+  color: #777777;
+  position: relative;
+  -webkit-appearance: none;
+  -webkit-box-shadow: inset 0 1px 2px rgb(0 0 0 / 8%);
+  box-shadow: inset 0 1px 2px rgb(0 0 0 / 8%);
+}
+select.form-control { -webkit-appearance: menulist; }
+::-webkit-input-placeholder {
+  font-style: italic;
+}
+:-moz-placeholder {
+  font-style: italic;
+}
+::-moz-placeholder {
+  font-style: italic;
+}
+:-ms-input-placeholder {
+  font-style: italic;
+}
+
+.form-select ,.form-control:hover{
+  border-color: #007bff;
+}
