@@ -47,7 +47,7 @@ export class SignUpComponent implements OnInit {
       securityAnswer2: ['', [Validators.required]],
       securityQuestion3: ['Select Question 3', [Validators.required]],
       securityAnswer3: ['', [Validators.required]],
-      referralCode: [''],
+      invite: [''],
       password: ["", [Validators.required, Validators.minLength(6)]],
       confirmPassword: ["", Validators.required],
     },

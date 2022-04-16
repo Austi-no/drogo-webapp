@@ -19,16 +19,22 @@ export class ProfileComponent implements OnInit {
     username: ""
   }
 
+  referralLink: any
+
 
   constructor(private service: ApiService, private spinner: NgxSpinnerService, private toastr: ToastrService) { }
 
   ngOnInit() {
     this.getAccount();
+    console.log(window.location.origin);
+
   }
 
   getAccount() {
     this.spinner.show()
     this.service.getAccount().subscribe((res: any) => {
+      console.log(res);
+      this.referralLink = window.location.origin + "?ref=" + res.invite
       this.accountDetail = res
       this.spinner.hide()
     }, (error: any) => {

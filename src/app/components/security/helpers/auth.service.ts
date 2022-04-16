@@ -11,7 +11,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   register(value: any): any {
-    return this.http.post(`${this.baseUrl}/signup`, value)
+    return this.http.post(`${this.baseUrl}/webApp/signup`, value)
   }
 
   login(value: any) {
@@ -22,11 +22,11 @@ export class AuthService {
     let options = {
       headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
     };
-    return this.http.post(`${this.baseUrl}/login`, body.toString(), options)
+    return this.http.post(`${this.baseUrl}/webApp/login`, body.toString(), options)
   }
 
   forgotPasssword(value: any) {
-    return this.http.post(`${this.baseUrl}/reset`, value)
+    return this.http.post(`${this.baseUrl}/webApp/reset`, value)
   }
 
 

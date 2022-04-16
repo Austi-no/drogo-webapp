@@ -1,21 +1,4 @@
-<!-- <div class="row">
 
-  <div class=" p-3">
-      <h4 style="color: gray;">Welcome Back, @username</h4>
-      <p><i style="color: green;" class="fa fa-credit-card mr-3"></i> Credit Balance: <span
-          style="color: green;font-weight: 600;"> <small ><i class="fa fa-money"> </i> <span style="font-size: 8px;">Add</span></small></span></p>
-    <div class="row text-center">
-      <div class="col">
-        <h5><i style="color: coral;" class="fa fa-street-view mr-3"></i> Current IP: <span
-            style="color: red;font-weight: 600;text-decoration: underline;">1234567</span></h5>
-      </div>
-      <div class="col">
-        <h5><i class="fa fa-globe " style="color: red;"></i> Proxy IP: <span style="color: red;">00000000</span>
-        </h5>
-      </div>
-    </div>
-  </div>
-</div> -->
 
 <div class="row mt-3">
 
@@ -48,7 +31,7 @@
       </div>
       <div class="content">
         <h6 class="mb-10">My Credit</h6>
-        <h3 class="text-bold mb-10">$ {{accountDetail?.creditsAvailable}}</h3>
+        <h3 class="text-bold mb-10">{{accountDetail?.creditsAvailable | currency:'USD'}}</h3>
         <p style="cursor: pointer;" class="text-sm text-success" data-toggle="modal" data-target="#sendCredit">
           <i class="fa fa-paper-plane"></i> Send Credit
           <span class="text-gray">24/7 available</span>
@@ -83,7 +66,7 @@
       <th scope="col">Trans Type</th>
       <th scope="col">Credit Amt</th>
       <th scope="col">Amount(USD)</th>
-      <th scope="col">Tx</th>
+      <th scope="col">Completed</th>
       <th scope="col">Reciever</th>
       <th scope="col">Address</th>
     </tr>
@@ -94,7 +77,8 @@
       <td>{{list?.transactionType}}</td>
       <td>{{list?.creditAmount}}</td>
       <td>{{list?.amountUSD}}</td>
-      <td>{{list?.tx}}</td>
+      <td>{{list?.isCompleted}}</td>
+      <td>{{list?.receiverName}}</td>
       <td>{{list?.paymentAddress}}</td>
     </tr>
 
@@ -116,7 +100,7 @@
           <input class="form-control" type="text" [(ngModel)]="username" name="username" placeholder="Reciever Username">
         </div>
         <div class="d-flex flex-row p-3">
-          <input class="form-control" type="number"[(ngModel)]="amountOfCredits" name="amountOfCredits"  placeholder="Amount">
+          <input class="form-control" type="number"[(ngModel)]="amountOfCredit" name="amountOfCredits"  placeholder="Amount">
         </div>
 
         <div class="form-group px-3">
@@ -142,10 +126,10 @@
           </button>
         </div>
         <div class="d-flex flex-row p-3">
-          <input class="form-control" type="text" [(ngModel)]="redeemCode" name="redeemCode" placeholder="Enter Code...">
+          <input class="form-control" type="text" [(ngModel)]="codeToRedeem" name="redeemCode" placeholder="Enter Code...">
         </div>
         <div class="form-group px-3">
-          <button class="btn btn-primary" (click)="sendCredit()">
+          <button class="btn btn-primary" (click)="redeemCode()">
             Redeem <i style="color: white;font-size: 1.3em;cursor: pointer;" class="fa fa-trophy "></i>
           </button>
 

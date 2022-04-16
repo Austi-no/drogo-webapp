@@ -13,34 +13,50 @@ export class ApiService {
 
 
   baseUrl: string = environment.backend.baseURL;
-  publicUrl: string = environment.backend.publicURL;
   constructor(private http: HttpClient) { }
 
   createTicket(value: any) {
-    return this.http.post(`${this.baseUrl}/createTicket`, value)
+    return this.http.post(`${this.baseUrl}/webApp/createTicket`, value)
   }
 
   getAllTicket() {
-    return this.http.get(`${this.baseUrl}/tickets`)
+    return this.http.get(`${this.baseUrl}/webApp/tickets`)
+  }
+  updateTicket(data:any){
+    return this.http.post(`${this.baseUrl}/webApp/updateTicket`, data)
   }
 
   getAccount() {
-    return this.http.get(`${this.baseUrl}/account`)
+    return this.http.get(`${this.baseUrl}/webApp/account`)
   }
 
   getTransactions() {
-    return this.http.get(`${this.baseUrl}/transactions`)
+    return this.http.get(`${this.baseUrl}/webApp/transactions`)
   }
 
   sendCredit(obj: any) :any{
-    return this.http.post(`${this.baseUrl}/sendCredits`,obj)
+    return this.http.post(`${this.baseUrl}/webApp/sendCredits`,obj)
   }
 
   getPricing() {
-    return this.http.get(`${this.publicUrl}/pricing`)
+    return this.http.get(`${this.baseUrl}/public/pricing`)
   }
 
-  payBuyCredit(id: any) {
-    return this.http.get(`${this.baseUrl}/payCredits/${id}`)
+  generatePaymentForCredit(planID: any) {
+    return this.http.get(`${this.baseUrl}/webApp/credits/confirm/${planID}`)
   }
+
+  payForCredit(planID: any,payID:any) {
+    return this.http.get(`${this.baseUrl}/webApp/credits/pay/${planID}?pay_id=${payID}`)
+  }
+
+  getReferrals() {
+    return this.http.get(`${this.baseUrl}/webApp/referrals`)
+  }
+
+  redeemCode(redeemCode: any) :any{
+    return this.http.get(`${this.baseUrl}/webApp/redeemCode?code_to_redeem=${redeemCode}`,{})
+  }
+
+
 }

@@ -12,6 +12,9 @@ import { Component, OnInit } from '@angular/core';
 export class TicketComponent implements OnInit {
   form!: FormGroup
   ticketList: any = [];
+  selectedTicketMessages: any = [];
+  selectedTicketToUpdate: any;
+  updateTicketMessage: any;
   constructor(private fb: FormBuilder, private service: ApiService, private toastr: ToastrService, private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
@@ -38,7 +41,9 @@ export class TicketComponent implements OnInit {
 
     }
     this.service.createTicket(this.form.value).subscribe((res: any) => {
-      // console.log(res);
+      console.log(res);
+      this.toastr.success('',"Your ticket is created successfully!")
+      this.form.reset()
       this.getTickets()
       this.spinner.hide()
 
@@ -54,6 +59,7 @@ export class TicketComponent implements OnInit {
   getTickets() {
     this.spinner.show()
     this.service.getAllTicket().subscribe((res: any) => {
+
       this.ticketList = res.tickets
       this.spinner.hide()
     }, (error: any) => {
@@ -61,5 +67,27 @@ export class TicketComponent implements OnInit {
       console.log(error);
 
     })
+  }
+
+  sendMessage(selectedTicket: any) {
+    this.selectedTicketToUpdate={}
+    this.ticketList.messages = JSON.parse(selectedTicket.messages)
+    this.selectedTicketToUpdate=selectedTicket
+    console.log(this.ticketList.messages);
+
+  }
+
+  updateTicket(list: any) {
+    var obj={
+      ticket_id:list.id,
+      status:list.status,
+      text: this.updateTicketMessage
+    }
+
+    this.service.updateTicket(obj).subscribe((res:any)=>{
+      console.log(res);
+
+    })
+
   }
 }
