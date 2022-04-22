@@ -1,0 +1,90 @@
+      <!-- ========== header start ========== -->
+      <header class="header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-5 col-md-5 col-6">
+              <div class="header-left d-flex align-items-center">
+                <div class="menu-toggle-btn mr-20">
+                  <!-- <button (click)="toggle()"
+                    id="menu-toggle"
+                    class="main-btn primary-btn btn-hover"
+                  >
+                    <i class="fa fa-chevron-left me-2"></i> Menu
+                  </button> -->
+                </div>
+                <div class="header-search d-none d-md-flex">
+                  <form action="#">
+                    <input type="text" placeholder="Search..." />
+                    <button><i class="fa fa-search"></i></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7 col-md-7 col-6">
+              <div class="header-right">
+
+                <!-- profile start -->
+                <div class="profile-box ml-15">
+                  <button
+                    class="dropdown-toggle bg-transparent border-0"
+                    type="button"
+                    id="profile"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <div class="profile-info">
+                      <div class="info">
+                        <h6>{{accountDetail?.username}}</h6>
+                        <div class="image">
+                          <img
+                            src="assets/images/avatar.png"
+                            alt=""
+                          />
+                          <span class="status"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <i style="cursor: pointer;" class="fa fa-bars"></i>
+                  </button>
+                  <ul
+                    class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="profile"
+                  >
+                  <li routerLink="/home">
+                    <a >
+                      <i class="fa fa-tachometer"></i> Dashboard
+                    </a>
+                  </li>
+                  <li routerLink="/home/ticket">
+                    <a >
+                      <i class="fa fa-ticket"></i> Ticket
+                    </a>
+                  </li>
+                  <li routerLink="/home/buyCredit">
+                    <a >
+                      <i class="fa fa-shopping-cart"></i> Buy Credit
+                    </a>
+                  </li>
+                  <li routerLink="/home/referral">
+                    <a >
+                      <i class="fa fa-users"></i>Referral
+                    </a>
+                  </li>
+                  <hr>
+                    <li routerLink="/home/profile">
+                      <a >
+                        <i class="fa fa-user"></i> View Profile
+                      </a>
+                    </li>
+                    <li (click)="logout()">
+                      <a > <i class="fa fa-sign-out-alt"></i> Logout </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- profile end -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- ========== header end ========== -->

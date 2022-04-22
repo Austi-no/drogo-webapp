@@ -1,0 +1,32 @@
+<div class="container mt-4">
+  <div class="row mb-4">
+    <h4 class="lead">Referal Link: <a
+        style="color: #09afdf; text-decoration: underline;"><strong>{{referralLink}}</strong></a> <span (click)="copyRefLink()"><i
+          style="background: #09afdf;color: white;padding: 5px; border-radius: 8px;cursor: pointer;" class="ml-3 fa fa-copy"></i></span></h4>
+  </div>
+  <h4 class="mb-3">My Referral</h4>
+  <table style="background: white;" class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Ref Owner</th>
+        <th scope="col">Ref Client</th>
+        <th scope="col">Credit Received</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let list of referralList;let i=index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{list.ref_owner}}</td>
+        <td>{{list.ref_client}}</td>
+        <td>{{list.creditsAwarded}}</td>
+        <td>{{list.date_awarded}}</td>
+
+      </tr>
+
+
+    </tbody>
+  </table>
+
+</div>
