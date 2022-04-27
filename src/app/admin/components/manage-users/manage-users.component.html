@@ -1,0 +1,225 @@
+<div class="container-fluid mt-4">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/admin/dashboard"><i class="fa fa-home"></i></a></li>
+      <li class="breadcrumb-item"><a routerLink="/admin/dashboard">Dashboard</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Users</li>
+    </ol>
+  </nav>
+  <h2 style="align-self: center;margin-top: 15px;"> Manage Users</h2>
+  <div class="mb-2 mt-4">
+    <div class="row">
+      <div class="col">
+        <div class="form-group float-left">
+          <span class="fa fa-search form-control-icon"></span>
+          <input type="text" class="form-control" placeholder="Search User...">
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group float-right">
+          <span class="fa fa-filter form-control-icon"></span>
+          <select [(ngModel)]="filterParam" name="filterParam" id="my-select" style="width:110%" class="form-control">
+            <option value="true">Active</option>
+            <option value="false">Disabled</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-1 ml-4">
+        <button (click)="filter(filterParam)" style="float: right;padding: 8px 20px;" type="button"
+          class="btn btn-success btn-sm">Filter <span class="fa fa-filter"></span></button>
+      </div>
+    </div>
+
+
+
+  </div>
+  <div class=" table-responsive">
+    <table style="background: white;" class="table table-bordered table-striped table-hover">
+      <thead class="thead-dark text-center">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Username</th>
+          <th scope="col">Available Credit</th>
+          <th scope="col">Account Status</th>
+          <th scope="col">Contact</th>
+          <th scope="col">Type</th>
+          <th scope="col">Action</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="text-center" *ngFor="let list of userList;let i=index">
+          <th scope="row">{{1+i}}</th>
+          <td>{{list.username}}</td>
+          <td>
+            <span class="m-2 p-2 badge badge-pill badge-danger" data-toggle="modal" data-target="#deduct"
+            (click)="selectedUser(list)">
+            <i class="fa fa-minus"></i>
+          </span>
+            <span class="m-2 p-2 badge badge-primary">{{list.creditsAvailable |number:'1.2-2'}}</span>
+            <span class="m-2 p-2 badge badge-pill badge-success" data-toggle="modal" data-target="#topUpCredit"
+            (click)="selectedUser(list)">
+            <i class="fa fa-plus"></i>
+          </span>
+          </td>
+          <td>
+            <div *ngIf="list.is_active===true">Active</div>
+            <div *ngIf="list.is_active===false">Disabled</div>
+          </td>
+          <td>{{list.contactInfo}}</td>
+          <td>{{list.contactType}}</td>
+          <td>
+
+            <span class="m-2 p-2 badge badge-primary" data-toggle="modal" data-target="#userInfo" (click)="selectedUser(list)">
+              <i class="fa fa-info-circle"></i>
+            </span>
+
+          </td>
+          <td>
+            <ui-switch checkedTextColor="#ffffff" [checked]="list.is_active===true" (change)="changeUserStatus($event)"
+              checkedLabel="Active" uncheckedLabel="Disabled" size="medium">
+            </ui-switch>
+          </td>
+
+          <!-- TOP UP MODAL -->
+          <div class="modal fade" id="topUpCredit" tabindex="-1" role="dialog" aria-labelledby="topUpCredit"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="topUpModal modal-content container d-flex justify-content-center">
+                <div class="card mt-5">
+                  <div class="d-flex flex-row justify-content-between p-3 adiv text-white"> <i
+                      class="fas fa-chevron-left"></i>
+                    <span class="pb-3"><strong>Top Up Credit</strong></span>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closeTopUp>
+                      <span aria-hidden="true">&times;
+                      </span>
+                    </button>
+                  </div>
+                  <div class="text-center p-3">
+                    <h5 class="text-muted mb-3">@{{selectedUserDetail?.username}}</h5>
+
+                    <p>
+                      Available Credit: <span class="badge badge-primary">{{selectedUserDetail?.creditsAvailable
+                        |number:'1.2-2'}}</span>
+                    </p>
+                  </div>
+                  <div class="text-center" style="    align-self: center;">
+                    <input style="text-align: center;font-weight: 800;border: 2px solid #09afdf;" class="form-control"
+                      [(ngModel)]="creditAmount" type="number" placeholder="0.00">
+
+                  </div>
+                  <div class="text-center" style="align-self: center;margin: 20px;">
+                    <button class="btn btn-primary" (click)="topUp(list,'ADD')">
+                      TopUp <i class="fa fa-arrow-up "></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DEDUCT USER MODAL -->
+
+          <div class="modal fade" id="deduct" tabindex="-1" role="dialog" aria-labelledby="deduct" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="topUpModal modal-content container d-flex justify-content-center">
+                <div class="card mt-5">
+                  <div class="d-flex flex-row justify-content-between p-3 adiv text-white"> <i
+                      class="fas fa-chevron-left"></i>
+                    <span class="pb-3"><strong>Deduct Credit</strong></span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closeDeduct>
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="text-center p-3">
+                    <h5 class="text-muted mb-3">@{{selectedUserDetail?.username}}</h5>
+
+                    <p>
+                      Available Credit: <span class="badge badge-primary">{{selectedUserDetail?.creditsAvailable
+                        |number:'1.2-2'}}</span>
+                    </p>
+                  </div>
+                  <div class="text-center" style="    align-self: center;">
+                    <input style="text-align: center;font-weight: 800;border: 2px solid #09afdf;" class="form-control"
+                      [(ngModel)]="creditAmount" type="number" placeholder="0.00">
+
+                  </div>
+                  <div class="text-center" style="align-self: center;margin: 20px;">
+                    <button class="btn btn-primary" (click)="topUp(list,'REMOVE')">
+                      Deduct <i class="fa fa-arrow-down "></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- USER INFO POP UP -->
+
+<div  id="userInfo" class="modal fade">
+  <div class="modal-dialog modal-confirm" style="    width: 704px !important;">
+    <div class="modal-content">
+      <div class="modal-header justify-content-center" >
+        <div class="icon-box">
+          <i class="fa fa-info-circle"></i>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+      <div  class="modal-body text-center">
+        <h4>@{{selectedUserDetail?.username}}</h4>
+        <!-- <h6 class="text-center mt-3">Summary</h6> -->
+      </div>
+      <div  class="table-responsive">
+        <div class="card-block" style="text-align: left !important;">
+            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
+            <div class="row mb-3">
+              <div class="col-sm-6">
+                <p class="m-b-10 f-w-600">Username</p>
+                <h6 class="text-muted f-w-400">@{{selectedUserDetail?.username}}</h6>
+              </div>
+              <div class="col-sm-6">
+                <p class="m-b-10 f-w-600">Available Credit</p>
+                <h6 class="text-muted f-w-600" ><span class="p-2 badge badge-success">{{selectedUserDetail?.creditsAvailable | currency:'USD'}}</span></h6>
+              </div>
+            </div>
+            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Security Questions</h6>
+            <div class="row">
+              <div class="col-sm-4">
+                <p class="m-b-10 f-w-600">Question 1</p>
+               <p> <h6 class="text-muted f-w-400">{{selectedUserDetail?.securityQuestion1}}</h6>
+              </div>
+              <div class="col-sm-4">
+                <p class="m-b-10 f-w-600">Question 2</p>
+                <h6 class="text-muted f-w-400">{{selectedUserDetail?.securityQuestion2}}</h6>
+              </div>
+
+              <div class="col-sm-4">
+                <p class="m-b-10 f-w-600">Question 3</p>
+                <h6 class="text-muted f-w-400">{{selectedUserDetail?.securityQuestion3}}</h6>
+              </div>
+            </div>
+
+          </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
+
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#09afdf" type="ball-scale-multiple" [fullScreen]="true">
+  <p style="color: #09afdf"> loading... </p>
+</ngx-spinner>

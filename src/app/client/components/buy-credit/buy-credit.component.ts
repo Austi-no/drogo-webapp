@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
-import { ApiService } from '../service/api.service';
+import { ApiService } from 'src/app/service/api.service';
 
 @Component({
   selector: 'app-buy-credit',

@@ -1,6 +1,6 @@
 import { NgxSpinnerService } from 'ngx-spinner';
-import { ApiService } from '../service/api.service';
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/service/api.service';
 
 @Component({
   selector: 'app-transactions',
@@ -17,7 +17,7 @@ export class TransactionsComponent implements OnInit {
   }
   getTransactions() {
     this.spinner.show()
-    this.service.getTransactions().subscribe((res: any) => {
+    this.service.getUserTransactions().subscribe((res: any) => {
       // console.log(res);
       this.transactionList = res?.transactions
       this.spinner.hide()

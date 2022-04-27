@@ -1,7 +1,7 @@
 import { ToastrService } from 'ngx-toastr';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { ApiService } from '../../components/service/api.service';
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/service/api.service';
 
 @Component({
   selector: 'app-dashbaord',
@@ -32,7 +32,7 @@ export class DashbaordComponent implements OnInit {
 
   getAccount() {
     this.spinner.show()
-    this.service.getAccount().subscribe((res: any) => {
+    this.service.getUserAccount().subscribe((res: any) => {
       this.accountDetail = res
       this.spinner.hide()
     }, (error: any) => {
@@ -44,7 +44,7 @@ export class DashbaordComponent implements OnInit {
 
   getTransactions() {
     this.spinner.show()
-    this.service.getTransactions().subscribe((res: any) => {
+    this.service.getUserTransactions().subscribe((res: any) => {
       console.log(res);
       this.transactionList = res?.transactions
       this.spinner.hide()
@@ -61,7 +61,7 @@ export class DashbaordComponent implements OnInit {
       amountOfCredit: this.amountOfCredit
     }
 
-    this.service.sendCredit(obj).subscribe((res: any) => {
+    this.service.sendCreditToUser(obj).subscribe((res: any) => {
       console.log(res);
       if (res.code == 200) {
         this.username="",

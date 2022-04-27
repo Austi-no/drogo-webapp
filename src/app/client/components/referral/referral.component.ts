@@ -1,7 +1,7 @@
-import { ApiService } from '../service/api.service';
 import { ToastrService } from 'ngx-toastr';
 import { ClipboardService } from 'ngx-clipboard';
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/service/api.service';
 
 @Component({
   selector: 'app-referral',
@@ -22,7 +22,7 @@ copyRefLink(){
 }
 
 getReferrals(){
-  this.service.getReferrals().subscribe((res:any)=>{
+  this.service.getUserReferrals().subscribe((res:any)=>{
     console.log(res);
     this.referralList=res.referrals
 

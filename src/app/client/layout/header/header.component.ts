@@ -2,7 +2,7 @@ import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
-import { ApiService } from 'src/app/client/components/service/api.service';
+import { ApiService } from 'src/app/service/api.service';
 declare const sidebarToggle: any;
 @Component({
   selector: 'app-header',
@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
 
   getAccount() {
     this.spinner.show()
-    this.service.getAccount().subscribe((res: any) => {
+    this.service.getUserAccount().subscribe((res: any) => {
       // console.log(res);
       this.accountDetail = res
       this.spinner.hide()

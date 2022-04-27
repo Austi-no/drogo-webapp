@@ -1,8 +1,8 @@
-import { ApiService } from '../service/api.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/service/api.service';
 
 @Component({
   selector: 'app-ticket',
@@ -58,7 +58,7 @@ export class TicketComponent implements OnInit {
 
   getTickets() {
     this.spinner.show()
-    this.service.getAllTicket().subscribe((res: any) => {
+    this.service.getUserTicket().subscribe((res: any) => {
 
       this.ticketList = res.tickets
       this.spinner.hide()
@@ -84,7 +84,7 @@ export class TicketComponent implements OnInit {
       text: this.updateTicketMessage
     }
 
-    this.service.updateTicket(obj).subscribe((res:any)=>{
+    this.service.updateUserTicket(obj).subscribe((res:any)=>{
       console.log(res);
 
     })
